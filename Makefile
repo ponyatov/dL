@@ -11,6 +11,11 @@ DUB  = /usr/bin/dub
 # package
 DMD_DEB = dmd_$(DMD_VER)-0_amd64.deb
 
+# all
+.PHONY: all
+all:
+	dub run
+
 # install
 .PHONY: install update gz ref
 install: gz ref $(DUB)
